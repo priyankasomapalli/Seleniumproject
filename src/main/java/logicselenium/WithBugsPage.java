@@ -16,8 +16,10 @@ public class WithBugsPage {
 		// Clicking on signin
 		signinButtonEle.click();
 		// Finding "RegisteryourAccount" element
-		WebElement registerEle = driver.findElement(By.xpath("//a[text()='Register your account']"));
+		//WebElement registerEle = driver.findElement(By.xpath("//a[text()='Register your account']"));
 		// Selecting the Register your account
+		WebElement registerEle = driver.findElement(By.xpath("//a[contains(text(),'Register')]"));
+		
 		registerEle.click();
 		//WebElement firstNameText = driver.findElement(By.xpath("//input[@id='first_name']"));
 		//firstNameText.sendKeys("Priyanka");
@@ -31,8 +33,11 @@ public class WithBugsPage {
 		//postalCodeText.sendKeys("28213");
 		//WebElement cityText=driver.findElement(By.xpath(""));
 		//cityText.sendKeys("Charlotte");
-		
-		
-
-	}
+		//WebElement phoneTextEle=driver.findElement(By.xpath("//input[@id='phone']"));
+		//phoneTextEle.sendKeys("123456789");
+		//WebElement emailIdText=driver.findElement(By.xpath("//input[@id='email']"));
+		//emailIdText.sendKeys("priyanka.mandava1412@gmail.com");
+		//WebElement passwordTextEle=driver.findElement(By.xpath("//input[@id='password']"));
+		//passwordTextEle.sendKeys("password123");
+		}
 }
