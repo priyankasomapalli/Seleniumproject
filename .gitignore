@@ -1,0 +1,72 @@
+############################
+# Maven
+############################
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+############################
+# Eclipse
+############################
+.project
+.classpath
+.settings/
+bin/
+tmp/
+
+############################
+# IntelliJ IDEA
+############################
+.idea/
+*.iml
+*.iws
+out/
+
+############################
+# VS Code
+############################
+.vscode/
+
+############################
+# Java
+############################
+*.class
+*.jar
+*.war
+*.ear
+*.javadoc
+*.log
+
+############################
+# OS-specific
+############################
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+############################
+# Logs & Temp
+############################
+*.log
+*.tmp
+*.swp
+*.swo
+
+############################
+# Other common ignores
+############################
+*.env
+*.properties.local
