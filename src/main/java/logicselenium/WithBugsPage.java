@@ -1,43 +1,81 @@
 package logicselenium;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WithBugsPage {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// Opening the Chrome browser
 		WebDriver driver = new ChromeDriver();
 		// Entering the URL
 		driver.get("https://with-bugs.practicesoftwaretesting.com/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		// Finding WebElement "Sign in"
 		WebElement signinButtonEle = driver.findElement(By.xpath("//a[text()='Sign in']"));
 		// Clicking on signin
 		signinButtonEle.click();
 		// Finding "RegisteryourAccount" element
-		//WebElement registerEle = driver.findElement(By.xpath("//a[text()='Register your account']"));
+		WebElement registerEle = driver.findElement(By.xpath("//a[text()='Register your account']"));
 		// Selecting the Register your account
-		WebElement registerEle = driver.findElement(By.xpath("//a[contains(text(),'Register')]"));
+		//Thread.sleep(5000);----->we cant use this method as it waits till the time completes
+		
+		//Clicking on register your account button
 		
 		registerEle.click();
-		//WebElement firstNameText = driver.findElement(By.xpath("//input[@id='first_name']"));
-		//firstNameText.sendKeys("Priyanka");
-		//WebElement lastNameText = driver.findElement(By.xpath("//input[@id='last_name']"));
-		//lastNameText.sendKeys("Somapalli");
-		//WebElement dateOfBirthVal = driver.findElement(By.xpath("//input[@id='dob']"));
-		//dateOfBirthVal.sendKeys("1994-06-16");
-		//WebElement addressText=driver.findElement(By.xpath("//input[@id='address']"));
-		//addressText.sendKeys("2021");
-		//WebElement postalCodeText=driver.findElement(By.xpath(""));
-		//postalCodeText.sendKeys("28213");
-		//WebElement cityText=driver.findElement(By.xpath(""));
-		//cityText.sendKeys("Charlotte");
-		//WebElement phoneTextEle=driver.findElement(By.xpath("//input[@id='phone']"));
-		//phoneTextEle.sendKeys("123456789");
-		//WebElement emailIdText=driver.findElement(By.xpath("//input[@id='email']"));
-		//emailIdText.sendKeys("priyanka.mandava1412@gmail.com");
-		//WebElement passwordTextEle=driver.findElement(By.xpath("//input[@id='password']"));
-		//passwordTextEle.sendKeys("password123");
+		//Finfing firstname web element
+		WebElement firstNameText = driver.findElement(By.xpath("//input[@id='first_name']"));
+		//Sending data to first name
+		firstNameText.sendKeys("Priyanka");
+		//finding lastname element
+		WebElement lastNameText = driver.findElement(By.xpath("//input[@id='last_name']"));
+		//Sending last name data
+		lastNameText.sendKeys("Somapalli");
+		//finding dob element
+		WebElement dateOfBirthEle = driver.findElement(By.xpath("//input[@id='dob']"));
+		//sending dob value
+		dateOfBirthEle.sendKeys("1994-06-16");
+		//finding address
+		WebElement addressText=driver.findElement(By.xpath("//input[@id='address']"));
+		//Sending address
+		addressText.sendKeys("2021");
+		//Thread.sleep(5000);
+		//finding postalcode element
+		WebElement postalCodeText=driver.findElement(By.xpath("//input[@id='postcode']"));
+		//sending postal value
+		postalCodeText.sendKeys("28213");
+		//finding city
+		WebElement cityText=driver.findElement(By.xpath("//input[@id='city']"));
+		//sending city data
+		cityText.sendKeys("Charlotte");
+		//finding country element
+		WebElement countryElement=driver.findElement(By.xpath("//input[@id='state']"));
+		//Sending country data
+		countryElement.sendKeys("NC");
+		//finding country element
+		WebElement countryEle=driver.findElement(By.xpath("//select[@id='country']"));
+		//selecting country element
+		countryEle.sendKeys("USA");
+		//finding phone element
+		WebElement phoneTextEle=driver.findElement(By.xpath("//input[@id='phone']"));
+		//sending phone num
+		phoneTextEle.sendKeys("123456789");
+		//finding email element
+		WebElement emailIdText=driver.findElement(By.xpath("//input[@id='email']"));
+		//sending email
+		emailIdText.sendKeys("priyanka.mandava1412@gmail.com");
+		//finding password element
+		WebElement passwordTextEle=driver.findElement(By.xpath("//input[@id='password']"));
+		//sending password
+		passwordTextEle.sendKeys("password123");
+		
+		//Finding register button
+		WebElement registerButton=driver.findElement(By.xpath("//button[@data-test='register-submit']"));
+		//Clicking on register button
+		Thread.sleep(8000);
+		registerButton.click();
 		}
 }
