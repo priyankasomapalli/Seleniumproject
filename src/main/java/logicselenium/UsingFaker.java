@@ -1,7 +1,8 @@
 package logicselenium;
 
+import java.text.SimpleDateFormat;
+//import java.text.SimpleDateFormat;
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,7 @@ import com.github.javafaker.Faker;
 public class UsingFaker {
 	public static void main(String[] args)
 	{
+		
 		//Opening the browser
 		WebDriver driver=new ChromeDriver();
 		//implicitWait()
@@ -19,6 +21,11 @@ public class UsingFaker {
 		//Opening the web page
 		driver.get("https://with-bugs.practicesoftwaretesting.com/#/");
 		//finding the element signin
+		Faker faker=new Faker();
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+		String dobEle=sdf.format(faker.date().birthday());
+			
+		
 		WebElement signinEle=driver.findElement(By.xpath("//a[text()='Sign in']"));
 		//Clicking on sign in
 		signinEle.click();
@@ -35,8 +42,9 @@ public class UsingFaker {
 		//Sending fake data
 		lastNameEle.sendKeys(new Faker().name().lastName());
 		//Finding date of birth element
-		//WebElement dobElement=driver.findElement(By.xpath("//input[@id='dob']"));
-		
+		WebElement dobElement=driver.findElement(By.xpath("//input[@id='dob']"));
+		//dobElement.sendKeys("1994-06-16");
+		dobElement.sendKeys(dobEle);
 		driver.quit();
 		
 		

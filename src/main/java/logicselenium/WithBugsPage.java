@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WithBugsPage {
 	public static void main(String[] args) throws InterruptedException {
+		
 		// Opening the Chrome browser
 		WebDriver driver = new ChromeDriver();
 		// Entering the URL
@@ -75,7 +76,7 @@ public class WithBugsPage {
 		//Finding register button
 		WebElement registerButton=driver.findElement(By.xpath("//button[@data-test='register-submit']"));
 		//Clicking on register button
-		Thread.sleep(8000);
+		//Thread.sleep(8000);
 		registerButton.click();
 		}
 }
