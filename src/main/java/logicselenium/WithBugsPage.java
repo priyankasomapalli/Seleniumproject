@@ -77,12 +77,11 @@ public class WithBugsPage {
 		WebElement passwordTextEle = driver.findElement(By.xpath("//input[@id='password']"));
 		// sending password
 		passwordTextEle.sendKeys("password123");
-		//Sending tab key
+		// Sending tab key
 		passwordTextEle.sendKeys(Keys.TAB);
 
 		WebElement registerButton = driver.findElement(By.xpath("//div/button[text()='Register ']"));
-		
-		Thread.sleep(3000);
+
 		registerButton.click();
 	}
 }
