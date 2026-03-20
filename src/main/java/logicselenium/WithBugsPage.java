@@ -82,6 +82,8 @@ public class WithBugsPage {
 
 		WebElement registerButton = driver.findElement(By.xpath("//div/button[text()='Register ']"));
 
+		Thread.sleep(3000);
+		
 		registerButton.click();
 	}
 }
