@@ -35,33 +35,34 @@ public class MyRegisterTests {
 		// Finding firstname element
 		WebElement firstNameEle = driver.findElement(By.xpath("//input[@id='first_name']"));
 		// Sending fake first name
-		firstNameEle.sendKeys(new Faker().name().firstName());
+		firstNameEle.sendKeys(fake.name().firstName());
 		// finding last name
 		WebElement lastNameEle = driver.findElement(By.xpath("//input[@id='last_name']"));
 		// sending last name fake data
-		lastNameEle.sendKeys(new Faker().name().lastName());
+		lastNameEle.sendKeys(fake.name().lastName());
 		// finding address field
 		WebElement addressTextEle = driver.findElement(By.xpath("//input[@id='address']"));
 		WebElement dob = driver.findElement(By.xpath("//input[@id='dob']"));
 		dob.sendKeys(DobEle);
 		// sending fake address
-		addressTextEle.sendKeys(new Faker().address().fullAddress());
+		addressTextEle.sendKeys(fake.address().fullAddress());
 		// finding postal code
 		WebElement postalCodeText = driver.findElement(By.xpath("//input[@id='postcode']"));
 		// sending fake postal code
-		postalCodeText.sendKeys(new Faker().address().zipCode());
+		postalCodeText.sendKeys(fake.address().zipCode());
 		// finding phone number element
 		WebElement phoneTextEle = driver.findElement(By.xpath("//input[@id='phone']"));
 		// sending fake number
-		phoneTextEle.sendKeys(new Faker().phoneNumber().cellPhone());
+		String mobile = fake.number().digits(10);
+		phoneTextEle.sendKeys(mobile);
 		// finding email element
 		WebElement emailIdText = driver.findElement(By.xpath("//input[@id='email']"));
 		// sending email using faker
-		emailIdText.sendKeys(new Faker().internet().emailAddress());
+		emailIdText.sendKeys(fake.internet().emailAddress());
 		// finding password element
 		WebElement passwordTextEle = driver.findElement(By.xpath("//input[@id='password']"));
 		// sending password
-		passwordTextEle.sendKeys(new Faker().internet().password());
+		passwordTextEle.sendKeys(fake.internet().password());
 		passwordTextEle.sendKeys(Keys.TAB);
 		// finding register button
 		WebElement registerButtonEle = driver.findElement(By.xpath("//div/button[text()='Register ']"));

@@ -74,7 +74,9 @@ public class DdActionsBugPage {
 
 		WebElement phone = driver.findElement(By.xpath("//input[@id='phone']"));
 
-		phone.sendKeys(fake.phoneNumber().phoneNumber());
+		String mobile = fake.number().digits(10);
+
+		phone.sendKeys(mobile);
 
 		WebElement email = driver.findElement(By.xpath("//input[@id='email']"));
 
