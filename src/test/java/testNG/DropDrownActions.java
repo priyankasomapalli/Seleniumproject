@@ -26,7 +26,6 @@ public class DropDrownActions {
 		Select dd=new Select(selectEle);
 		dd.selectByIndex(1);
 		dd.selectByVisibleText("Option 2");
-		
 	}
 
 }
