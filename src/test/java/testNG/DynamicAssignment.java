@@ -33,6 +33,8 @@ public class DynamicAssignment {
 
 			validateText(By.xpath("//p[@id='message']"), "It's gone!",wait);    
 	        
+	        
+	        
 	    }
 
 	    public void clickElement(By xpath, WebDriverWait wait) {
