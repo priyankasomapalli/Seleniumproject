@@ -34,14 +34,16 @@ public class DynamicControlsValidation {
 
 		removeButton.click();
 
-		WebElement add = driver.findElement(By.xpath("//button[text()='Add']"));
+		WebElement add =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Add')]")));
 
-		Assert.assertEquals("//button[text()='Add']", add);
+		String title = add.getText();
+		Assert.assertEquals(title, "Add");
 
 		wait.until(ExpectedConditions.elementToBeClickable(add));
-
-		Assert.assertEquals("//p[@id='message']", "It's gone!");
+		String msg = driver.findElement(By.xpath("//p[@id='message']")).getText();
+		Assert.assertEquals(msg, "It's gone!");
+		System.out.println("It is validated");
 
 	}
-	
+
 }
