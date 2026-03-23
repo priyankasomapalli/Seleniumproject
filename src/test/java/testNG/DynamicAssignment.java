@@ -42,9 +42,7 @@ public class DynamicAssignment {
 	        element.click();
 	    }
 	    public void validateText(By xpath, String expectedText, WebDriverWait wait) {
-	        String actualText = wait
-	                .until(ExpectedConditions.visibilityOfElementLocated(xpath))
-	                .getText();
+	        String actualText = wait .until(ExpectedConditions.visibilityOfElementLocated(xpath)).getText();
 
 	        Assert.assertEquals(actualText, expectedText);
 	    }
