@@ -36,6 +36,8 @@ public class DropDrownActions {
 		dd.selectByIndex(1);
 
 		dd.selectByVisibleText("Option 2");
+
+		driver.quit();
 	}
 
 }

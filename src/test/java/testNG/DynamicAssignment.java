@@ -44,6 +44,7 @@ public class DynamicAssignment {
 
 		System.out.println("It is validated");
 
+		driver.quit();
 	}
 
 	public void clickElement(By xpath, WebDriverWait wait) {

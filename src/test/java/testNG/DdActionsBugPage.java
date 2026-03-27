@@ -94,6 +94,7 @@ public class DdActionsBugPage {
 
 		registerButtonEle.click();
 
+		driver.quit();
 	}
 
 }

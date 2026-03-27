@@ -53,6 +53,8 @@ public class BrowserNavigation {
 		checkboxEle.click();
 
 		driver.navigate().refresh();
+
+		driver.quit();
 	}
 
 }

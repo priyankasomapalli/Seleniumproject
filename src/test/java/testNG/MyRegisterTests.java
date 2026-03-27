@@ -123,5 +123,7 @@ public class MyRegisterTests {
 
 		registerButtonEle.click();
 
+		driver.quit();
+
 	}
 }
