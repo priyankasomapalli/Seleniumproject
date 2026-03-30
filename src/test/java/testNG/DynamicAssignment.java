@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 public class DynamicAssignment {
 	@Test
 	public void validateDc() {
+		
 		WebDriver driver = new ChromeDriver();
 
 		driver.navigate().to("https://the-internet.herokuapp.com/");

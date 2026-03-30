@@ -12,14 +12,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class JavaScriptAlerts {
+public class JavaScriptAlerts extends BaseForHeroukExWait {
 	@Test
 	public void handlingJsAlerts() {
-		WebDriver driver = new ChromeDriver();
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
-		driver.navigate().to("https://the-internet.herokuapp.com/");
 
 		driver.findElement(By.xpath("//a[text()='JavaScript Alerts']")).click();
 
@@ -52,6 +47,5 @@ public class JavaScriptAlerts {
 
 		System.out.println("You have rejected the alert");
 
-		driver.quit();
 	}
 }

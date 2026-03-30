@@ -11,12 +11,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DynamicControlsValidation {
+public class DynamicControlsValidation extends BaseForHeroukExWait {
 	@Test
 	public void validateDc() {
-		WebDriver driver = new ChromeDriver();
 
-		driver.navigate().to("https://the-internet.herokuapp.com/");
+		//preReq(); no need to mention as the base class beforemethod and aftermethod annotations are executed by default in inheritance concept if any
 
 		WebElement dc = driver.findElement(By.xpath("//a[text()='Dynamic Controls']"));
 
@@ -48,9 +47,6 @@ public class DynamicControlsValidation {
 		Assert.assertEquals(msg, "It's gone!");
 
 		System.out.println("It is validated");
-
-		driver.quit();
-
 	}
 
 }

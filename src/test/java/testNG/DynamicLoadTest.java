@@ -11,19 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DynamicLoadTest {
+public class DynamicLoadTest extends BaseForHeroukExWait {
 	@Test
 	public void dynamicLoadActions() {
 		// Invoking the Chrome
-
-		WebDriver driver = new ChromeDriver();
-
-		driver.navigate().to("https://the-internet.herokuapp.com/");
-
-		// Explicit wait declaration
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
 		// Finding the DynamicLoadingElement
 
 		WebElement dl = driver.findElement(By.xpath("//a[text()='Dynamic Loading']"));
@@ -76,6 +67,5 @@ public class DynamicLoadTest {
 
 		System.out.println("Executed Successfully");
 
-		driver.quit();
 	}
 }
