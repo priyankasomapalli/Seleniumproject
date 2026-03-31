@@ -13,12 +13,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class JsPrompts extends BaseForHeroukExWait {
+
+	WebElement result = driver.findElement(By.id("result"));
+
+	WebElement jsPrompt = driver.findElement(By.xpath("//button[text()='Click for JS Prompt']"));
+
 	@Test
 	public void sendText() {
 
 		driver.findElement(By.xpath("//a[text()='JavaScript Alerts']")).click();
-
-		WebElement jsPrompt = driver.findElement(By.xpath("//button[text()='Click for JS Prompt']"));
 
 		jsPrompt.click();
 
@@ -33,8 +36,6 @@ public class JsPrompts extends BaseForHeroukExWait {
 		alert.sendKeys("Password");
 
 		alert.accept();
-
-		WebElement result = driver.findElement(By.xpath("//p[@id='result']"));
 
 		String msg = result.getText();
 

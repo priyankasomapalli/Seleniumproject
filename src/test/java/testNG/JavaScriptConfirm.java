@@ -13,12 +13,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class JavaScriptConfirm extends BaseForHeroukExWait {
+
+	WebElement jsConfirmEle = driver.findElement(By.xpath("//button[text()='Click for JS Confirm']"));
+
 	@Test
 	public void jsConfirmation() {
 
 		driver.findElement(By.xpath("//a[text()='JavaScript Alerts']")).click();
-
-		WebElement jsConfirmEle = driver.findElement(By.xpath("//button[text()='Click for JS Confirm']"));
 
 		jsConfirmEle.click();
 
