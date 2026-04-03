@@ -12,29 +12,24 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class IphoneAssignment {
-WebDriver driver=new ChromeDriver();
+public class IphoneAssignment extends BaseForHeroukExWait {
 
-WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(8));
+	@Test
+	public void iphoneTest() {
+		Actions actions = new Actions(driver);
 
-Actions actions=new Actions(driver);
+		driver.get("https://www.amazon.com/");
 
-@Test
-public void iphoneTest()
-{
-driver.get("https://www.amazon.com/");
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("twotabsearchtextbox"))).sendKeys("iphone 17");
 
+		actions.sendKeys(Keys.ENTER).perform();
 
+		WebElement iphone = wait.until(ExpectedConditions.elementToBeClickable(
+				By.xpath("//div[@data-component-id='13']/following-sibling::div[@data-component-id='15']")));
 
-wait.until(ExpectedConditions.elementToBeClickable(By.id("twotabsearchtextbox"))).sendKeys("iphone 17");
+		iphone.click();
 
-actions.sendKeys(Keys.ENTER).perform();
+		System.out.println("Required iphone is selected");
 
-WebElement iphone=driver.findElement(By.xpath("//span[contains(text(),'Cosmic Orange')]"));
-
-iphone.click();
-
-
-
-}
+	}
 }

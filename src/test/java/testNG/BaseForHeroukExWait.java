@@ -24,7 +24,7 @@ public class BaseForHeroukExWait {
 
 		driver = new ChromeDriver();
 
-		driver.navigate().to("https://the-internet.herokuapp.com/");
+		//driver.navigate().to("https://the-internet.herokuapp.com/");
 
 		wait = new WebDriverWait(driver, Duration.ofSeconds(8));
 
