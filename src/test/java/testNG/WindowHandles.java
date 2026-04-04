@@ -47,13 +47,20 @@ public class WindowHandles extends BaseForHeroukExWait {
 		System.out.println(allHandles);
 
 		for (String handle : allHandles) {
+
 			if (!handle.equals(parentWindowHandle))
 
 			{
+
 				driver.switchTo().window(handle);
+
 				WebElement child1 = driver.findElement(By.xpath("//h1[@id='sampleHeading']"));
+
 				String msg = child1.getText();
+
 				Assert.assertEquals(msg, "This is a sample page");
+
+				driver.close();
 
 			}
 		}
