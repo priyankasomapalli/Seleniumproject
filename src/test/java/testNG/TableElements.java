@@ -24,8 +24,8 @@ public class TableElements {
 
 		driver.get("https://practicetestautomation.com/practice-test-table/");
 
-		WebElement advancedEle = driver.findElement(
-				By.xpath("//table/tbody/tr[5]/td[4]/following::tr/td[3]/following-sibling::td[text()='Advanced']"));
+		WebElement advancedEle = driver
+				.findElement(By.xpath("//table/tbody/tr[5]/td[4][text()='Intermediate']/following::td[6]"));
 
 		Actions actions = new Actions(driver);
 
@@ -33,14 +33,13 @@ public class TableElements {
 
 		System.out.println(msg);
 
-		actions.doubleClick(advancedEle);
-		// keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
+		actions.doubleClick(advancedEle).keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).perform();
 
 		Assert.assertEquals(msg, "Advanced");
 
 		System.out.println("Test verified");
 
-		driver.close();
+		// driver.close();
 
 	}
 
