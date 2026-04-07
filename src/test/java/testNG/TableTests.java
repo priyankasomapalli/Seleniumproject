@@ -30,8 +30,6 @@ public class TableTests {
 
 	public void languageFilterTest() {
 
-		driver.navigate().to("https://practicetestautomation.com/practice-test-table/");
-
 		wait.until(ExpectedConditions.elementToBeClickable(javaButton)).click();
 
 		List<WebElement> javaAllElements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(javaElements));
