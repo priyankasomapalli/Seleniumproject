@@ -13,10 +13,12 @@ public class TableBase {
 
 	WebDriver driver;
 
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
+	
 	@BeforeMethod
 	public void prereq() {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 
 		String browser = "chrome";
 
