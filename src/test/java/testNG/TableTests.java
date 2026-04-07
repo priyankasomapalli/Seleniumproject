@@ -47,6 +47,7 @@ public class TableTests {
 				System.out.println("Test Failed!!!!!!");
 
 		}
+		
 	}
 
 	By beginnerCheckBox = By.xpath("//legend[text()='Level']/following::label[text()=' Beginner']");
@@ -82,6 +83,7 @@ public class TableTests {
 				System.out.println("Other elements are found.");
 
 		}
+		
 
 	}
 
@@ -103,6 +105,7 @@ public class TableTests {
 
 		Assert.assertEquals(msg, "No matching courses.");
 
+		
 	}
 
 	By anyLabel = By.xpath("//div[@role='button']");
@@ -136,6 +139,105 @@ public class TableTests {
 
 		}
 
+		
 	}
 
+	By combinedPythonEle = By.xpath("//table//tr[not(contains(@style,'display: none;'))]/td[3]");
+
+	By combinedBeginnerEle = By.xpath("//table//tr[not(contains(@style,'display: none;'))]/td[4]");
+
+	By combinedTenThousandEle = By.xpath("//table//tr[not(contains(@style,'display: none;'))]/td[5]");
+
+	@Test
+
+	public void combinedFiltersTest() {
+		driver.navigate().to("https://practicetestautomation.com/practice-test-table/");
+
+		wait.until(ExpectedConditions.elementToBeClickable(pythonCheckBox)).click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(advancedCheckBox)).click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(intermediateCheckBox)).click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(anyLabel)).click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(tenThousandValue)).click();
+		List<WebElement> allPythonElements = wait
+				.until(ExpectedConditions.presenceOfAllElementsLocatedBy(combinedPythonEle));
+
+		List<WebElement> allBeginnerElements = wait
+				.until(ExpectedConditions.presenceOfAllElementsLocatedBy(combinedBeginnerEle));
+
+		List<WebElement> allValues = wait
+				.until(ExpectedConditions.presenceOfAllElementsLocatedBy(combinedTenThousandEle));
+
+		for (WebElement ele1 : allPythonElements) {
+			String text = ele1.getText();
+			if (text.equals("Python"))
+				System.out.println("Only python elements are present");
+			else
+				System.out.println("Found non python element");
+		}
+		for (WebElement ele2 : allBeginnerElements) {
+			String text = ele2.getText();
+			if (text.equals("Beginner"))
+				System.out.println("Found only Beginner level");
+			else
+				System.out.println("Found another elements");
+		}
+
+		for (WebElement ele : allValues)
+
+		{
+			String text = ele.getText();
+
+			int value = Integer.valueOf(text);
+
+			if (value > 10000)
+				System.out.println("Only above 10000 values are present");
+			else
+				System.out.println("Unfiltered data appeared");
+
+		}
+		
+	}
+
+	By anyReset = By.xpath("//input[@value='Any']");
+	By beginer = By.xpath("//label/input[@value='Beginner']");
+	By inter = By.xpath("//label/input[@value='Intermediate']");
+
+	By advanced = By.xpath("//label/input[@value='Advanced']");
+
+	By resetButton = By.xpath("//button[@id='resetFilters']");
+
+	@Test
+	public void resetTest() {
+		driver.navigate().to("https://practicetestautomation.com/practice-test-table/");
+
+		wait.until(ExpectedConditions.elementToBeClickable(pythonCheckBox)).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(resetButton));
+
+		WebElement resetButtonElement = wait.until(ExpectedConditions.elementToBeClickable(resetButton));
+		resetButtonElement.click();
+
+		WebElement anyResetButton = wait.until(ExpectedConditions.visibilityOfElementLocated(anyReset));
+
+		boolean beginnerElement = wait.until(ExpectedConditions.elementSelectionStateToBe(beginer, true));
+
+		boolean intermediateElement = wait.until(ExpectedConditions.elementSelectionStateToBe(inter, true));
+
+		boolean advancedElement = wait.until(ExpectedConditions.elementSelectionStateToBe(advanced, true));
+
+		boolean anyButton = anyResetButton.isEnabled();
+
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(resetButton));
+
+		if ((beginnerElement && intermediateElement && advancedElement && anyButton) == true)
+			System.out.println("Good with the required test case");
+
+		
+	}
+	
+	
 }
