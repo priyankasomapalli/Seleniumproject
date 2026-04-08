@@ -20,11 +20,37 @@ public class TableTests {
 
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-	By advancedCheckBox = By.xpath("//legend[text()='Level']/following::label[text()=' Advanced']");
-
 	By javaButton = By.xpath("//label/input[@value='Java']");
 
 	By javaElements = By.xpath("//table/tbody/tr/td[3][contains(text(),'Java')]");
+
+	By beginnerElements = By.xpath("//table//tr[not(contains(@style, 'display: none'))]/td[4]");
+
+	By pythonCheckBox = By.xpath("//fieldset//label/input[@value='Python']");
+
+	By noDataEle = By.xpath("//div[@id='noData']");
+
+	By anyLabel = By.xpath("//div[@role='button']");
+
+	By tenThousandValue = By.xpath("//ul/li[@data-value='10000']");
+
+	By allMinValues = By.xpath("//table//tr[not(contains(@style, 'display: none'))]/td[5]");
+
+	By combinedPythonEle = By.xpath("//table//tr[not(contains(@style,'display: none;'))]/td[3]");
+
+	By combinedBeginnerEle = By.xpath("//table//tr[not(contains(@style,'display: none;'))]/td[4]");
+
+	By combinedTenThousandEle = By.xpath("//table//tr[not(contains(@style,'display: none;'))]/td[5]");
+
+	By anyReset = By.xpath("//input[@value='Any']");
+
+	By beginer = By.xpath("//label/input[@value='Beginner']");
+
+	By inter = By.xpath("//label/input[@value='Intermediate']");
+
+	By advanced = By.xpath("//label/input[@value='Advanced']");
+
+	By resetButton = By.xpath("//button[@id='resetFilters']");
 
 	@Test
 
@@ -47,14 +73,8 @@ public class TableTests {
 				System.out.println("Test Failed!!!!!!");
 
 		}
-		
+
 	}
-
-	By beginnerCheckBox = By.xpath("//legend[text()='Level']/following::label[text()=' Beginner']");
-
-	By beginnerElements = By.xpath("//table//tr[not(contains(@style, 'display: none'))]/td[4]");
-
-	By intermediateCheckBox = By.xpath("//legend[text()='Level']/following::label[text()=' Intermediate']");
 
 	@Test
 
@@ -62,9 +82,9 @@ public class TableTests {
 
 		driver.navigate().to("https://practicetestautomation.com/practice-test-table/");
 
-		wait.until(ExpectedConditions.elementToBeClickable(advancedCheckBox)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(advanced)).click();
 
-		wait.until(ExpectedConditions.elementToBeClickable(intermediateCheckBox)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(inter)).click();
 
 		List<WebElement> beginnerAllElements = wait
 
@@ -83,13 +103,8 @@ public class TableTests {
 				System.out.println("Other elements are found.");
 
 		}
-		
 
 	}
-
-	By pythonCheckBox = By.xpath("//fieldset//label/input[@value='Python']");
-
-	By noDataEle = By.xpath("//div[@id='noData']");
 
 	@Test
 
@@ -99,20 +114,13 @@ public class TableTests {
 
 		driver.findElement(pythonCheckBox).click();
 
-		driver.findElement(beginnerCheckBox).click();
+		driver.findElement(beginer).click();
 
 		String msg = driver.findElement(noDataEle).getText();
 
 		Assert.assertEquals(msg, "No matching courses.");
 
-		
 	}
-
-	By anyLabel = By.xpath("//div[@role='button']");
-
-	By tenThousandValue = By.xpath("//ul/li[@data-value='10000']");
-
-	By allMinValues = By.xpath("//table//tr[not(contains(@style, 'display: none'))]/td[5]");
 
 	@Test
 
@@ -139,29 +147,24 @@ public class TableTests {
 
 		}
 
-		
 	}
-
-	By combinedPythonEle = By.xpath("//table//tr[not(contains(@style,'display: none;'))]/td[3]");
-
-	By combinedBeginnerEle = By.xpath("//table//tr[not(contains(@style,'display: none;'))]/td[4]");
-
-	By combinedTenThousandEle = By.xpath("//table//tr[not(contains(@style,'display: none;'))]/td[5]");
 
 	@Test
 
 	public void combinedFiltersTest() {
+
 		driver.navigate().to("https://practicetestautomation.com/practice-test-table/");
 
 		wait.until(ExpectedConditions.elementToBeClickable(pythonCheckBox)).click();
 
-		wait.until(ExpectedConditions.elementToBeClickable(advancedCheckBox)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(advanced)).click();
 
-		wait.until(ExpectedConditions.elementToBeClickable(intermediateCheckBox)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(inter)).click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(anyLabel)).click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(tenThousandValue)).click();
+
 		List<WebElement> allPythonElements = wait
 				.until(ExpectedConditions.presenceOfAllElementsLocatedBy(combinedPythonEle));
 
@@ -172,16 +175,23 @@ public class TableTests {
 				.until(ExpectedConditions.presenceOfAllElementsLocatedBy(combinedTenThousandEle));
 
 		for (WebElement ele1 : allPythonElements) {
+
 			String text = ele1.getText();
+
 			if (text.equals("Python"))
 				System.out.println("Only python elements are present");
+
 			else
 				System.out.println("Found non python element");
 		}
+
 		for (WebElement ele2 : allBeginnerElements) {
+
 			String text = ele2.getText();
+
 			if (text.equals("Beginner"))
 				System.out.println("Found only Beginner level");
+
 			else
 				System.out.println("Found another elements");
 		}
@@ -195,23 +205,17 @@ public class TableTests {
 
 			if (value > 10000)
 				System.out.println("Only above 10000 values are present");
+
 			else
 				System.out.println("Unfiltered data appeared");
 
 		}
-		
+
 	}
-
-	By anyReset = By.xpath("//input[@value='Any']");
-	By beginer = By.xpath("//label/input[@value='Beginner']");
-	By inter = By.xpath("//label/input[@value='Intermediate']");
-
-	By advanced = By.xpath("//label/input[@value='Advanced']");
-
-	By resetButton = By.xpath("//button[@id='resetFilters']");
 
 	@Test
 	public void resetTest() {
+
 		driver.navigate().to("https://practicetestautomation.com/practice-test-table/");
 
 		wait.until(ExpectedConditions.elementToBeClickable(pythonCheckBox)).click();
@@ -219,6 +223,7 @@ public class TableTests {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(resetButton));
 
 		WebElement resetButtonElement = wait.until(ExpectedConditions.elementToBeClickable(resetButton));
+
 		resetButtonElement.click();
 
 		WebElement anyResetButton = wait.until(ExpectedConditions.visibilityOfElementLocated(anyReset));
@@ -236,8 +241,17 @@ public class TableTests {
 		if ((beginnerElement && intermediateElement && advancedElement && anyButton) == true)
 			System.out.println("Good with the required test case");
 
-		
+		else
+			System.out.println("Failed test");
+
 	}
 	
+	@Test
 	
+	public void courseNameSortTest()
+	{
+		driver.navigate().to("https://practicetestautomation.com/practice-test-table/");
+		
+	}
+
 }
