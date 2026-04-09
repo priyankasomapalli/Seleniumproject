@@ -70,6 +70,6 @@ public class BaseTest {
 
 		System.out.println("Done with the Testing,quitting from the Browser");
 
-		// driver.quit();
+		driver.quit();
 	}
 }

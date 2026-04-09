@@ -12,26 +12,33 @@ import pageclasses.SecureAreaPage;
 import pageclasses.WelcomeToTheHeroukAppPage;
 
 public class FormAuthTest extends BaseTest {
+	
+	
 
 	@Test
 
 	public void loginSuccessTest() throws NumberFormatException, IOException {
 
-		WelcomeToTheHeroukAppPage whObj = new WelcomeToTheHeroukAppPage();
+		WelcomeToTheHeroukAppPage whObj = new WelcomeToTheHeroukAppPage(wait);
 
-		whObj.clickFormAuthLink(driver, wait);
+		whObj.clickFormAuthLink();
 
-		LoginFunctionalityPage loginObj = new LoginFunctionalityPage();
+		
+		
+		LoginFunctionalityPage loginObj = new LoginFunctionalityPage(wait);
 
-		loginObj.enterUserName(driver, wait);
+		loginObj.enterUserName("tomsmith");
 
-		loginObj.enterPassword(driver, wait);
+		loginObj.enterPassword("SuperSecretPassword!");
 
-		loginObj.clickLogin(driver, wait);
+		loginObj.clickLogin();
 
-		SecureAreaPage secureObj = new SecureAreaPage();
+		
+		
+		
+		SecureAreaPage secureObj = new SecureAreaPage(wait);
 
-		String msg = secureObj.verifySecureArea(driver);// verifySecureArea() returns string
+		String msg = secureObj.verifySecureArea();// verifySecureArea() returns string
 
 		System.out.println(msg);
 

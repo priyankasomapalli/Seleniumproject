@@ -1,28 +1,39 @@
 package pageclasses;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 public class LoginFunctionalityPage {
+	
+	
+	public LoginFunctionalityPage(WebDriverWait wait)
+	{
+		this.wait=wait;
+	}
+	By userName = By.id("username");
 
-	By userName=By.id("username");
+	By password = By.id("password");
 
-	public void enterUserName(WebDriver driver, WebDriverWait wait) {
+	By loginButton = By.tagName("button");
+	
+	
+	WebDriverWait wait;
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(userName)).sendKeys("tomsmith");
+	public void enterUserName(String username) {
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(userName)).sendKeys(username);
 
 	}
 
-	public void enterPassword(WebDriver driver, WebDriverWait wait) {
+	public void enterPassword(String passwordData) {
 
-		driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(password)).sendKeys(passwordData);
 	}
 
-	public void clickLogin(WebDriver driver, WebDriverWait wait) {
+	public void clickLogin() {
 
-		driver.findElement(By.tagName("button")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(loginButton)).click();
+
 	}
 }
