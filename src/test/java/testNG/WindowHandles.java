@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class WindowHandles extends BaseForHeroukExWait {
+public class WindowHandles extends BaseForInternetHeroukappTest {
 	By windowLink = By.linkText("Alerts, Frame & Windows");
 
 	By browserEle = By.linkText("Browser Windows");

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ActionsPractice extends BaseForHeroukExWait {
+public class ActionsPractice extends BaseForInternetHeroukappTest {
 	@Test
 	public void dragAndDropTest() {
 		

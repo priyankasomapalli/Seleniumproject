@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DynamicControlsValidation extends BaseForHeroukExWait {
+public class DynamicControlsValidation extends BaseForInternetHeroukappTest {
 	@Test
 	public void validateDc() {
 

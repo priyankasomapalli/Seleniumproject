@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class JsAlertImplicitWait extends BaseForHeroukExWait {
+public class JsAlertImplicitWait extends BaseForInternetHeroukappTest {
 	@Test
 	public void jsimplicit() {
 

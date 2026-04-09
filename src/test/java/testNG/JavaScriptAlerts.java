@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class JavaScriptAlerts extends BaseForHeroukExWait {
+public class JavaScriptAlerts extends BaseForInternetHeroukappTest {
 	@Test
 	public void handlingJsAlerts() {
 

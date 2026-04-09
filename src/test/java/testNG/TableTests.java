@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -138,7 +139,7 @@ public class TableTests {
 
 			String text = ele.getText();
 
-			int value = Integer.parseInt(text);
+			int value = Integer.valueOf(text);
 
 			if (value >= 10000) {
 				System.out.println("Values are sorted");
@@ -245,13 +246,32 @@ public class TableTests {
 			System.out.println("Failed test");
 
 	}
-	
+
+	By dropDownId = By.id("sortBy");
+
+	By sortedElements = By.xpath("//table//tr/td[@data-col='course']");
+
 	@Test
-	
-	public void courseNameSortTest()
-	{
+
+	public void courseNameSortTest() {
 		driver.navigate().to("https://practicetestautomation.com/practice-test-table/");
-		
+
+		WebElement dropDown = wait.until(ExpectedConditions.elementToBeClickable(dropDownId));
+
+		Select dd = new Select(dropDown);
+
+		dd.selectByVisibleText("Course Name");
+
+		List<WebElement> allCourseSortedElements = wait
+				.until(ExpectedConditions.presenceOfAllElementsLocatedBy(sortedElements));
+
+		for (WebElement ele : allCourseSortedElements) {
+			String text = ele.getText();
+
+			System.out.println(text);
+
+		}
+
 	}
 
 }

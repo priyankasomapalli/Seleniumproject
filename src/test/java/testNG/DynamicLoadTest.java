@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DynamicLoadTest extends BaseForHeroukExWait {
+public class DynamicLoadTest extends BaseForInternetHeroukappTest {
 	@Test
 	public void dynamicLoadActions() {
 		// Invoking the Chrome

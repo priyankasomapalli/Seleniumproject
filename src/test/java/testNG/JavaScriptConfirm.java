@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class JavaScriptConfirm extends BaseForHeroukExWait {
+public class JavaScriptConfirm extends BaseForInternetHeroukappTest {
 
 	WebElement jsConfirmEle = driver.findElement(By.xpath("//button[text()='Click for JS Confirm']"));
 

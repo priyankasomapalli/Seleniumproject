@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-public class FormAuthenticationActions extends BaseForHeroukExWait {
+public class FormAuthenticationActions extends BaseForInternetHeroukappTest {
 
 	@Test
 	public void formActionsTest() {
