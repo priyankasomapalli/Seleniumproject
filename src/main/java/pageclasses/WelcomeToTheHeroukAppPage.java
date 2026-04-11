@@ -3,8 +3,8 @@ package pageclasses;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import util.WaitUtils;
 
 public class WelcomeToTheHeroukAppPage {
 
@@ -12,21 +12,14 @@ public class WelcomeToTheHeroukAppPage {
 
 	By javaScriptEle = By.linkText("JavaScript Alerts");
 
-	WebDriverWait wait;
-
-	public WelcomeToTheHeroukAppPage(WebDriverWait wait) {
-		this.wait = wait;
-	}
-
 	public void clickFormAuthLink() throws NumberFormatException, IOException {
-
-		wait.until(ExpectedConditions.elementToBeClickable(formAuthEle)).click();
+		WaitUtils.elementToBeClickable(formAuthEle);
 
 	}
 
 	public void clickJavaScripAlerts() {
-		
-		wait.until(ExpectedConditions.elementToBeClickable(javaScriptEle)).click();
+
+		WaitUtils.elementToBeClickable(javaScriptEle);
 
 	}
 }

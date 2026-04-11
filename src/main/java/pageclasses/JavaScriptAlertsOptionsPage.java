@@ -1,22 +1,10 @@
 package pageclasses;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import util.WaitUtils;
 
 public class JavaScriptAlertsOptionsPage {
-
-	WebDriverWait wait;
-	WebDriver driver;
-	
-	public JavaScriptAlertsOptionsPage(WebDriverWait wait,WebDriver driver)
-	{
-		this.wait=wait;
-		this.driver=driver;
-	}
-
-	
 
 	By heading = By.tagName("h3");
 
@@ -29,25 +17,25 @@ public class JavaScriptAlertsOptionsPage {
 	By resultJsConfirmEle = By.id("result");
 
 	public String getHeadingTitle() {
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(heading)).getText();
+		return WaitUtils.visibilityOfElement(heading).getText();
 	}
 
 	public String clickForJsAlert() {
-		wait.until(ExpectedConditions.elementToBeClickable(jsAlert)).click();
-		wait.until(ExpectedConditions.alertIsPresent()).accept();
-		//Alert alert = driver.switchTo().alert();
-		//alert.accept();
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(resultEle)).getText();
+		WaitUtils.elementToBeClickable(jsAlert);
+		WaitUtils.alertIsPresentAccept();
+		// Alert alert = driver.switchTo().alert();
+		// alert.accept();
+		return WaitUtils.visibilityOfElement(resultEle).getText();
 
 	}
 
 	public String clickForJsConfirm() {
-		wait.until(ExpectedConditions.elementToBeClickable(jsConfirm)).click();
-		wait.until(ExpectedConditions.alertIsPresent()).accept();
-		//Alert alert = driver.switchTo().alert();
-		//alert.accept();
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(resultJsConfirmEle)).getText();
+		WaitUtils.elementToBeClickable(jsConfirm);
+		WaitUtils.alertIsPresentAccept();
 
+		// Alert alert = driver.switchTo().alert();
+		// alert.accept();
+		return WaitUtils.visibilityOfElement(resultJsConfirmEle).getText();
 	}
 
 }

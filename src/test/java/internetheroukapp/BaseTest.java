@@ -1,7 +1,6 @@
 package internetheroukapp;
 
 import java.io.IOException;
-import java.time.Duration;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -9,6 +8,7 @@ import org.testng.annotations.BeforeMethod;
 
 import managers.DriverManager;
 import util.BaseUtils;
+import util.WaitUtils;
 
 public class BaseTest {
 
@@ -20,10 +20,7 @@ public class BaseTest {
 
 		DriverManager.initDriver();
 		DriverManager.goToUrl(BaseUtils.getConfigValue("url"));
-
-		wait = new WebDriverWait(DriverManager.getDriver(),
-				Duration.ofSeconds(Integer.valueOf(BaseUtils.getConfigValue("explicitwait"))));
-
+		WaitUtils.initWait();
 	}
 
 	@AfterMethod

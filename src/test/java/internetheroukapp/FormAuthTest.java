@@ -19,13 +19,13 @@ public class FormAuthTest extends BaseTest {
 
 	public void loginSuccessTest() throws NumberFormatException, IOException {
 
-		WelcomeToTheHeroukAppPage whObj = new WelcomeToTheHeroukAppPage(wait);
+		WelcomeToTheHeroukAppPage whObj = new WelcomeToTheHeroukAppPage();
 
 		whObj.clickFormAuthLink();
 
 		
 		
-		LoginFunctionalityPage loginObj = new LoginFunctionalityPage(wait);
+		LoginFunctionalityPage loginObj = new LoginFunctionalityPage();
 
 		loginObj.enterUserName("tomsmith");
 
@@ -36,7 +36,7 @@ public class FormAuthTest extends BaseTest {
 		
 		
 		
-		SecureAreaPage secureObj = new SecureAreaPage(wait);
+		SecureAreaPage secureObj = new SecureAreaPage();
 
 		String msg = secureObj.verifySecureArea();// verifySecureArea() returns string
 
