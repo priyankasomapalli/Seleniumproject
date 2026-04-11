@@ -1,6 +1,5 @@
 package pageclasses;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -35,16 +34,18 @@ public class JavaScriptAlertsOptionsPage {
 
 	public String clickForJsAlert() {
 		wait.until(ExpectedConditions.elementToBeClickable(jsAlert)).click();
-		Alert alert = driver.switchTo().alert();
-		alert.accept();
+		wait.until(ExpectedConditions.alertIsPresent()).accept();
+		//Alert alert = driver.switchTo().alert();
+		//alert.accept();
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(resultEle)).getText();
 
 	}
 
 	public String clickForJsConfirm() {
 		wait.until(ExpectedConditions.elementToBeClickable(jsConfirm)).click();
-		Alert alert = driver.switchTo().alert();
-		alert.accept();
+		wait.until(ExpectedConditions.alertIsPresent()).accept();
+		//Alert alert = driver.switchTo().alert();
+		//alert.accept();
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(resultJsConfirmEle)).getText();
 
 	}
