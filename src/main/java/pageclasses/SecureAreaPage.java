@@ -1,9 +1,8 @@
 package pageclasses;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
-import util.WaitUtils;
+import util.UserInterfaceActionsUtils;
 
 public class SecureAreaPage {
 
@@ -13,9 +12,7 @@ public class SecureAreaPage {
 	
 	public String verifySecureArea() {
 
-		WebElement secureAreaElement = WaitUtils.visibilityOfElement(secureAreaEle);
-		return secureAreaElement.getText();
-
+		return UserInterfaceActionsUtils.getText(secureAreaEle);
 	}
 
 }

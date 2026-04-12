@@ -2,7 +2,7 @@ package pageclasses;
 
 import org.openqa.selenium.By;
 
-import util.WaitUtils;
+import util.UserInterfaceActionsUtils;
 
 public class JavaScriptAlertsOptionsPage {
 
@@ -17,25 +17,21 @@ public class JavaScriptAlertsOptionsPage {
 	By resultJsConfirmEle = By.id("result");
 
 	public String getHeadingTitle() {
-		return WaitUtils.visibilityOfElement(heading).getText();
+		return UserInterfaceActionsUtils.getText(heading);
 	}
 
 	public String clickForJsAlert() {
-		WaitUtils.elementToBeClickable(jsAlert);
-		WaitUtils.alertIsPresentAccept();
-		// Alert alert = driver.switchTo().alert();
-		// alert.accept();
-		return WaitUtils.visibilityOfElement(resultEle).getText();
+		UserInterfaceActionsUtils.click(jsAlert);
+		UserInterfaceActionsUtils.acceptAlert();
+		return UserInterfaceActionsUtils.getText(resultEle);
 
 	}
 
 	public String clickForJsConfirm() {
-		WaitUtils.elementToBeClickable(jsConfirm);
-		WaitUtils.alertIsPresentAccept();
+		UserInterfaceActionsUtils.click(jsConfirm);
+		UserInterfaceActionsUtils.acceptAlert();
+		return UserInterfaceActionsUtils.getText(resultJsConfirmEle);
 
-		// Alert alert = driver.switchTo().alert();
-		// alert.accept();
-		return WaitUtils.visibilityOfElement(resultJsConfirmEle).getText();
 	}
 
 }

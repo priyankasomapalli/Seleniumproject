@@ -28,7 +28,8 @@ public class WaitUtils {
 	
 	public static void elementToBeClickable(By locator)
 	{
-		wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+		WebElement ele=wait.until(ExpectedConditions.elementToBeClickable(locator));
+		ele.click();
 	}
 	
 	public static WebElement visibilityOfElement(By locator)

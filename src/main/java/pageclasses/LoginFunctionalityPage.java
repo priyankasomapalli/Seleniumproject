@@ -2,7 +2,7 @@ package pageclasses;
 
 import org.openqa.selenium.By;
 
-import util.WaitUtils;
+import util.UserInterfaceActionsUtils;
 
 public class LoginFunctionalityPage {
 
@@ -13,20 +13,18 @@ public class LoginFunctionalityPage {
 	By loginButton = By.tagName("button");
 
 	public void enterUserName(String username) {
-		WaitUtils.visibilityOfElement(userName).sendKeys(username);
+		UserInterfaceActionsUtils.enterText(userName, username);
 
-		
 	}
 
 	public void enterPassword(String passwordData) {
+		UserInterfaceActionsUtils.enterText(password, passwordData);
 
-		WaitUtils.visibilityOfElement(password).sendKeys(passwordData);
-		
 	}
 
 	public void clickLogin() {
 
-		WaitUtils.elementToBeClickable(loginButton);
+		UserInterfaceActionsUtils.click(loginButton);
 
 	}
 }
