@@ -3,10 +3,13 @@ package internetheroukapp;
 import java.io.IOException;
 import java.lang.reflect.Method;
 
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+
+import com.aventstack.extentreports.MediaEntityBuilder;
 
 import managers.DriverManager;
 import managers.ExtentManager;
@@ -34,7 +37,21 @@ public class BaseTest {
 
 	@AfterMethod
 
-	public void endTest() {
+	public void tearDown(ITestResult result) throws IOException {
+		
+		if(result.getStatus()==ITestResult.SUCCESS)
+		{
+			ExtentTestManager.log.pass("Test Passed.");
+		}
+		else if(result.getStatus()==ITestResult.FAILURE)
+		{
+			ExtentTestManager.log.fail(result.getThrowable(),
+					MediaEntityBuilder.createScreenCaptureFromPath(BaseUtils.
+					getScreenShotPath(DriverManager.getDriver(),result.getInstance().getClass().getSimpleName()
+					+ "," +result.getMethod().getMethodName())).build());
+		}
+		
+		
 
 		System.out.println("Done with the Testing,quitting from the Browser");
 
