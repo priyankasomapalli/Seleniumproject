@@ -13,18 +13,18 @@ public class UserInterfaceActionsUtils {
 
 	public static void enterText(By locator, String msg) {
 		WaitUtils.visibilityOfElement(locator).sendKeys(msg);
-		ExtentTestManager.log.info("Entered text for is" +msg);
+		ExtentTestManager.log.info("Entered text is  " +msg);
 	}
 	
 	public static void enterPassword(By locator, String password)
 	{
 		WaitUtils.visibilityOfElement(locator).sendKeys(password);
-		ExtentTestManager.log.info("Entered text for " + "is **********");
+		ExtentTestManager.log.info("Entered text is **********");
 	}
 
 	public static String getText(By locator,String name) {
 		String text=WaitUtils.visibilityOfElement(locator).getText();
-		ExtentTestManager.log.info("Text of the "+name + "is" +text);
+		ExtentTestManager.log.info("Text of the "+name + "  is  " +text);
 		return text;
 	}
 	
