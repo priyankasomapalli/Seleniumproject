@@ -12,7 +12,9 @@ public class SecureAreaPage {
 	
 	public String verifySecureArea() {
 
-		return UserInterfaceActionsUtils.getText(secureAreaEle);
+		 String text=UserInterfaceActionsUtils.getText(secureAreaEle,"SecureArea Element Text");
+		 
+		 return text;
 	}
 
 }

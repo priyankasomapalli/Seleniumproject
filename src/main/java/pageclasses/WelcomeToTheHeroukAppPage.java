@@ -9,22 +9,22 @@ public class WelcomeToTheHeroukAppPage {
 	By formAuthEle = By.xpath("//li/a[contains(text(),'Form Authentication')]");
 
 	By javaScriptEle = By.linkText("JavaScript Alerts");
-	
-	By dropDownLink=By.linkText("Dropdown");
 
-	public void clickFormAuthLink() {
-		UserInterfaceActionsUtils.click(formAuthEle);
+	By dropDownLink = By.linkText("Dropdown");
+
+	public void clickFormAuthLink(String name) {
+		UserInterfaceActionsUtils.click(formAuthEle, name);
+
+	}
+
+	public void clickJavaScripAlerts(String name) {
+
+		UserInterfaceActionsUtils.click(javaScriptEle,name);
 
 	}
 
-	public void clickJavaScripAlerts() {
+	public void clickDropDown(String name) {
+		UserInterfaceActionsUtils.click(dropDownLink,name);
 
-		UserInterfaceActionsUtils.click(javaScriptEle);
-
-	}
-	
-	public void clickDropDown()
-	{
-		UserInterfaceActionsUtils.click(dropDownLink);
 	}
 }

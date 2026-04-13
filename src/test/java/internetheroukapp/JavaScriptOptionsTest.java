@@ -13,15 +13,15 @@ public class JavaScriptOptionsTest extends BaseTest{
 
 	public void verifyJavaScriptSuccessTest() {
 		WelcomeToTheHeroukAppPage whObj = new WelcomeToTheHeroukAppPage();
-		whObj.clickJavaScripAlerts();
+		whObj.clickJavaScripAlerts("JavaScriptAlert");
 
 		JavaScriptAlertsOptionsPage jsaObj = new JavaScriptAlertsOptionsPage();
 		String heading = jsaObj.getHeadingTitle();
 		Assert.assertTrue(heading.contains("JavaScript Alerts"));
-		jsaObj.clickForJsAlert();
-		String msg=jsaObj.clickForJsAlert();
+		jsaObj.clickForJsAlert("JavascriptAlert");
+		String msg=jsaObj.clickForJsAlert("JavascriptAlert");
 		Assert.assertEquals(msg,"You successfully clicked an alert");
-		String msg1=jsaObj.clickForJsConfirm();
+		String msg1=jsaObj.clickForJsConfirm("JsConfirmElement");
 		Assert.assertEquals(msg1,"You clicked: Ok");
 	}
 

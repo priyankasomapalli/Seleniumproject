@@ -17,20 +17,20 @@ public class JavaScriptAlertsOptionsPage {
 	By resultJsConfirmEle = By.id("result");
 
 	public String getHeadingTitle() {
-		return UserInterfaceActionsUtils.getText(heading);
+		return UserInterfaceActionsUtils.getText(heading,"headingTitle");
 	}
 
-	public String clickForJsAlert() {
-		UserInterfaceActionsUtils.click(jsAlert);
+	public String clickForJsAlert(String name) {
+		UserInterfaceActionsUtils.click(jsAlert,"JavaScriptalert");
 		UserInterfaceActionsUtils.acceptAlert();
-		return UserInterfaceActionsUtils.getText(resultEle);
+		return UserInterfaceActionsUtils.getText(resultEle,"JavaScriptalert");
 
 	}
 
-	public String clickForJsConfirm() {
-		UserInterfaceActionsUtils.click(jsConfirm);
+	public String clickForJsConfirm(String name) {
+		UserInterfaceActionsUtils.click(jsConfirm,"JavascriptConfirm");
 		UserInterfaceActionsUtils.acceptAlert();
-		return UserInterfaceActionsUtils.getText(resultJsConfirmEle);
+		return UserInterfaceActionsUtils.getText(resultJsConfirmEle,"JavascriptConfirm");
 
 	}
 

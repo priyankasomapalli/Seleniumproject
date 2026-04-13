@@ -12,8 +12,6 @@ import pageclasses.SecureAreaPage;
 import pageclasses.WelcomeToTheHeroukAppPage;
 
 public class FormAuthTest extends BaseTest {
-	
-	
 
 	@Test
 
@@ -21,10 +19,8 @@ public class FormAuthTest extends BaseTest {
 
 		WelcomeToTheHeroukAppPage whObj = new WelcomeToTheHeroukAppPage();
 
-		whObj.clickFormAuthLink();
+		whObj.clickFormAuthLink("form authentication");
 
-		
-		
 		LoginFunctionalityPage loginObj = new LoginFunctionalityPage();
 
 		loginObj.enterUserName("tomsmith");
@@ -33,16 +29,12 @@ public class FormAuthTest extends BaseTest {
 
 		loginObj.clickLogin();
 
-		
-		
-		
 		SecureAreaPage secureObj = new SecureAreaPage();
 
 		String msg = secureObj.verifySecureArea();// verifySecureArea() returns string
 
 		System.out.println(msg);
 
-		// Assert.assertEquals(msg, " Secure Area");//
 		Assert.assertTrue(msg.contains("Secure"));
 
 	}

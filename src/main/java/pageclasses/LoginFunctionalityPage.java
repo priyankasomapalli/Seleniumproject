@@ -14,17 +14,18 @@ public class LoginFunctionalityPage {
 
 	public void enterUserName(String username) {
 		UserInterfaceActionsUtils.enterText(userName, username);
+		
 
 	}
 
 	public void enterPassword(String passwordData) {
-		UserInterfaceActionsUtils.enterText(password, passwordData);
-
+		UserInterfaceActionsUtils.enterPassword(password, passwordData);
+		
 	}
 
 	public void clickLogin() {
 
-		UserInterfaceActionsUtils.click(loginButton);
-
+		UserInterfaceActionsUtils.click(loginButton,"loginButtonElement");
+		
 	}
 }
