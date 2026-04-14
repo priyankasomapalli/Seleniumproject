@@ -1,6 +1,8 @@
 package util;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import managers.ExtentTestManager;
 
@@ -40,4 +42,23 @@ public class UserInterfaceActionsUtils {
 		ExtentTestManager.log.info("Alert is dismissed");
 	}
 
+	public static void selectDropDownByIndex(By locator, int index)
+	{
+		WebElement ele=WaitUtils.visibilityOfElement(locator);
+		Select dd=new Select(ele);
+		dd.selectByIndex(index);
+		ExtentTestManager.log.info("DropDown option is selected by index value. Index is:   " +index);
+		
+		
+	}
+	
+	public static void selectDropDownByVisibleText(By locator, String text)
+	{
+		WebElement ele=WaitUtils.visibilityOfElement(locator);
+		Select dd=new Select(ele);
+		dd.selectByVisibleText(text);
+		ExtentTestManager.log.info("DropDown option is selected by Visible text on the page. Text is:   " +text);
+		
+		
+	}
 }

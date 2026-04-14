@@ -2,7 +2,7 @@ package pageclasses;
 
 import org.openqa.selenium.By;
 
-import util.WaitUtils;
+import util.UserInterfaceActionsUtils;
 
 public class DropDownTitlePage {
 
@@ -10,9 +10,25 @@ public class DropDownTitlePage {
 
 	By dropDownOptions = By.id("dropdown");
 
-	public String getPageTitle() {
-		String text = WaitUtils.visibilityOfElement(dropDownTitle).getText();
-		return text;
+	
+	public  void clickDropDown()
+	{
+		UserInterfaceActionsUtils.click(dropDownOptions,"DropDownlist");
+	}
+	
+	public void getPageTitle()
+	{
+		UserInterfaceActionsUtils.getText(dropDownTitle, "dropDownTitle");
+		
 	}
 
-}
+	
+	public void selectDropDownOptionsByValue(int val)
+	{
+		UserInterfaceActionsUtils.selectDropDownByIndex(dropDownOptions,val);
+		
+	}
+	public void selectDropDownOptionsByText(String text)
+	{
+	UserInterfaceActionsUtils.selectDropDownByVisibleText(dropDownOptions, text);
+}}
