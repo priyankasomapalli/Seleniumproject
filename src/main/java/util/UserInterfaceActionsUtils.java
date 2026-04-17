@@ -10,55 +10,47 @@ public class UserInterfaceActionsUtils {
 
 	public static void click(By locator, String name) {
 		WaitUtils.elementToBeClickable(locator);
-		ExtentTestManager.log.info("Clicked on " +name +" link");
+		ExtentTestManager.log.info("Clicked on " + name + " link");
 	}
 
 	public static void enterText(By locator, String msg) {
 		WaitUtils.visibilityOfElement(locator).sendKeys(msg);
-		ExtentTestManager.log.info("Entered text is  " +msg);
+		ExtentTestManager.log.info("Entered text is  " + msg);
 	}
-	
-	public static void enterPassword(By locator, String password)
-	{
+
+	public static void enterPassword(By locator, String password) {
 		WaitUtils.visibilityOfElement(locator).sendKeys(password);
 		ExtentTestManager.log.info("Entered text is **********");
 	}
 
-	public static String getText(By locator,String name) {
-		String text=WaitUtils.visibilityOfElement(locator).getText();
-		ExtentTestManager.log.info("Text of the "+name + "  is  " +text);
+	public static String getText(By locator, String name) {
+		String text = WaitUtils.visibilityOfElement(locator).getText();
+		ExtentTestManager.log.info("Text of the " + name + "  is  " + text);
 		return text;
 	}
-	
-	public static void acceptAlert()
-	{
+
+	public static void acceptAlert() {
 		WaitUtils.alertIsPresentAccept();
 		ExtentTestManager.log.info("Alert is accepted");
 	}
-	
-	public static void dismissAlert()
-	{
+
+	public static void dismissAlert() {
 		WaitUtils.alertIsPresentDismissal();
 		ExtentTestManager.log.info("Alert is dismissed");
 	}
 
-	public static void selectDropDownByIndex(By locator, int index)
-	{
-		WebElement ele=WaitUtils.visibilityOfElement(locator);
-		Select dd=new Select(ele);
+	public static void selectDropDownByIndex(By locator, int index) {
+		WebElement ele = WaitUtils.visibilityOfElement(locator);
+		Select dd = new Select(ele);
 		dd.selectByIndex(index);
-		ExtentTestManager.log.info("DropDown option is selected by index value. Index is:   " +index);
-		
-		
+		ExtentTestManager.log.info("DropDown option is selected by index value. Index is:   " + index);
 	}
-	
-	public static void selectDropDownByVisibleText(By locator, String text)
-	{
-		WebElement ele=WaitUtils.visibilityOfElement(locator);
-		Select dd=new Select(ele);
+
+	public static void selectDropDownByVisibleText(By locator, String text) {
+		WebElement ele = WaitUtils.visibilityOfElement(locator);
+		Select dd = new Select(ele);
 		dd.selectByVisibleText(text);
-		ExtentTestManager.log.info("DropDown option is selected by Visible text on the page. Text is:   " +text);
-		
-		
+		ExtentTestManager.log.info("DropDown option is selected by Visible text on the page. Text is:   " + text);
+
 	}
 }
