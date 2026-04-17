@@ -15,6 +15,14 @@ public class JSUtils {
 		js.executeScript("arguments[0].click();", element);
 
 	}
+	
+	public static void jsEnterText(WebElement element, String text) {
+
+		JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
+
+		js.executeScript("arguments[0].value='text';", element);
+
+	}
 
 	public static void scrollToAnElement(WebElement element) {
 

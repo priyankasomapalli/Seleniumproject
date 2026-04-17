@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="internetheroukapp.DropDownTest"/>
+      
+      <class name="internetheroukapp.JavaScriptOptionsTest"/>
+      
+      <class name="internetheroukapp.FormAuthTest"/>
+     
+      <class name="internetheroukapp.BaseTest"/>
+      
+    </classes>
+  </test> <!-- Test -->
+  
+   <test thread-count="5" name="Test2">
+    <classes>
+   <class name="testNG.BrowserNavigation"/>
+      <class name="testNG.DynamicLoadTest"/>
+      <class name="testNG.JavaScriptConfirm"/>
+      <class name="testNG.WindowHandles"/>
+      <class name="testNG.JsAlertImplicitWait"/>
+      <class name="testNG.FormAuthenticationActions"/>
+      <class name="testNG.TableTests"/>
+       <class name="testNG.GitHubActionsExample"/>
+      <class name="testNG.DropDrownActions"/>
+      <class name="testNG.TableElements"/>
+      <class name="testNG.TypesOfLocators"/>
+      <class name="testNG.JavaScriptAlerts"/>
+      <class name="testNG.MyRegisterTests"/>
+      <class name="testNG.DynamicControlsValidation"/>
+      <class name="testNG.JsPrompts"/>
+      <class name="testNG.ActionsPractice"/>
+      <class name="testNG.DdActionsBugPage"/>
+      <class name="testNG.IphoneAssignment"/>
+      <class name="testNG.DynamicAssignment"/>
+      <class name="testNG.XpathAccess"/>
+      </classes>
+      </test>
+</suite> <!-- Suite -->
