@@ -14,42 +14,37 @@ import managers.DriverManager;
 public class WaitUtils {
 
 	private static WebDriverWait wait;
-	
-	public static void initWait() throws NumberFormatException, IOException
-	{
-		wait=new WebDriverWait(DriverManager.getDriver(),
+
+	public static void initWait() throws NumberFormatException, IOException {
+		wait = new WebDriverWait(DriverManager.getDriver(),
 				Duration.ofSeconds(Integer.valueOf(BaseUtils.getConfigValue("explicitwait"))));
 	}
-	
-	public static WebDriverWait getWait()
-	{
+
+	public static WebDriverWait getWait() {
 		return wait;
 	}
-	
-	public static void elementToBeClickable(By locator)
-	{
-		WebElement ele=wait.until(ExpectedConditions.elementToBeClickable(locator));
-		ele.click();
+
+	public static void elementToBeClickable(By locator) {
+		// click using java script executor
+		JSUtils.jsClick(wait.until(ExpectedConditions.elementToBeClickable(locator)));
+		// wait.until(ExpectedConditions.elementToBeClickable(locator));
+		// ele.click();
 	}
-	
-	public static WebElement visibilityOfElement(By locator)
-	{
+
+	public static WebElement visibilityOfElement(By locator) {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
-	
-	public static List<WebElement> visibilityOfAllElements(By locator)
-	{
-	return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));	
+
+	public static List<WebElement> visibilityOfAllElements(By locator) {
+		return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
 	}
-	
-	public static void alertIsPresentAccept()
-	{
+
+	public static void alertIsPresentAccept() {
 		wait.until(ExpectedConditions.alertIsPresent()).accept();
 	}
-	
-	public static void alertIsPresentDismissal()
-	{
+
+	public static void alertIsPresentDismissal() {
 		wait.until(ExpectedConditions.alertIsPresent()).dismiss();
 	}
-	
+
 }
