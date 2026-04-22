@@ -23,6 +23,14 @@ public class JSUtils {
 		js.executeScript("arguments[0].value='text';", element);
 
 	}
+	
+	public static void jsEnterPassword(WebElement element) {
+
+		JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
+
+		js.executeScript("arguments[0].value='text';", element);
+	}
+
 
 	public static void scrollToAnElement(WebElement element) {
 
