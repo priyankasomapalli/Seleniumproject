@@ -10,5 +10,10 @@ public class BranchA implements IBank{
 	{
 		System.out.println("Deposit is done through branchA");
 	}
+	
+	public void getMiniStatement()
+	{
+		System.out.println("This is a method of child");
+	}
 
 }
