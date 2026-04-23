@@ -71,6 +71,7 @@ public class RegisterYourAccountPage {
 	}
 
 	public void enterPassword(String password) {
+		
 		UserInterfaceActionsUtils.enterPassword(passwordField, password);
 	}
 

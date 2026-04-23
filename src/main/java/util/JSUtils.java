@@ -1,7 +1,6 @@
 package util;
 
 import org.openqa.selenium.JavascriptExecutor;
-
 import org.openqa.selenium.WebElement;
 
 import managers.DriverManager;
@@ -24,15 +23,15 @@ public class JSUtils {
 
 	}
 	
-	public static void jsEnterPassword(WebElement element) {
+	public static WebElement jsEnterPassword(WebElement element) {
 
 		JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
 
-		js.executeScript("arguments[0].value='text';", element);
+		return (WebElement) js.executeScript("arguments[0].value='password';", element);
 	}
 
 
-	public static void scrollToAnElement(WebElement element) {
+	public static void scrollToAnElement(WebElement element ) {
 
 		JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
 

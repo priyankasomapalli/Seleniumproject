@@ -14,7 +14,7 @@ public class UserInterfaceActionsUtils {
 	}
 
 	public static void enterText(By locator, String msg) {
-		WaitUtils.visibilityOfElement(locator).sendKeys(msg);
+		WaitUtils.visibilityOfElements(locator).sendKeys(msg);
 		ExtentTestManager.log.info("Entered text is  " + msg);
 	}
 
@@ -47,7 +47,7 @@ public class UserInterfaceActionsUtils {
 	}
 
 	public static void selectDropDownByVisibleText(By locator, String text) {
-		WebElement ele = WaitUtils.visibilityOfElement(locator);
+		WebElement ele = WaitUtils.visibilityOfElements(locator);
 		Select dd = new Select(ele);
 		dd.selectByVisibleText(text);
 		ExtentTestManager.log.info("DropDown option is selected by Visible text on the page. Text is:   " + text);

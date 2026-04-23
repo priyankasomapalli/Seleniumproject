@@ -14,8 +14,6 @@ public class RegisterSuccessLoginTest extends BugsBaseTest {
 		WithBugsHomePage wbhObj = new WithBugsHomePage();
 
 		wbhObj.clickSignin();
-		
-		
 
 		SignInPage sObj = new SignInPage();
 
@@ -28,6 +26,10 @@ public class RegisterSuccessLoginTest extends BugsBaseTest {
 		rObj.enterLastName("Mandava");
 
 		rObj.enterDob("1994-06-16");
+		
+		rObj.enterAddress("2018,Traditions");
+
+		rObj.enterPostCode("28164");
 
 		rObj.enterCity("Charlotte");
 
@@ -42,12 +44,11 @@ public class RegisterSuccessLoginTest extends BugsBaseTest {
 		rObj.enterPassword("4734@jap934");
 
 		rObj.clickRegister();
-		
-		
-		RegisterSuccessLoginPage rsObj=new RegisterSuccessLoginPage();
-		
+
+		RegisterSuccessLoginPage rsObj = new RegisterSuccessLoginPage();
+
 		rsObj.validateRegisterText("Login");
-		
+
 	}
 
 }

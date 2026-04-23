@@ -49,7 +49,7 @@ public class BugsBaseTest {
 
 		System.out.println("Done with the Testing,quitting from the Browser");
 
-		DriverManager.quitDriver();
+		//DriverManager.quitDriver();
 	}
 
 	@AfterSuite
