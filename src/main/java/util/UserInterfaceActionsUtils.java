@@ -19,6 +19,8 @@ public class UserInterfaceActionsUtils {
 	}
 
 	public static void enterPassword(By locator, String password) {
+		WebElement ele=WaitUtils.visibilityOfElement(locator);
+		JSUtils.scrollToAnElement(ele);
 		WaitUtils.visibilityOfElement(locator).sendKeys(password);
 		ExtentTestManager.log.info("Entered text is **********");
 	}
