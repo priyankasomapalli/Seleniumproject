@@ -36,11 +36,17 @@ public class ArrayListExample {
 		
 		System.out.println(aList);
 		
+		aList.set(0, "Mandava");
+		
 		//remove
 		aList.remove(2);
 		
 		System.out.println(aList);
 		
+		
+		aList.clear();
+		
+		System.out.println(aList);
 		
 		
 		
