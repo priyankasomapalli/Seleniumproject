@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -111,17 +111,21 @@ public class MyRegisterTests {
 
 		passwordTextEle.sendKeys(fake.internet().password());
 
-		passwordTextEle.sendKeys(Keys.TAB);
+		// passwordTextEle.sendKeys(Keys.TAB);
 
 		// finding register button
 
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
 		WebElement registerButtonEle = driver.findElement(By.xpath("//div/button[text()='Register ']"));
+
+		js.executeScript("arguments[0].click()", registerButtonEle);
 
 		// Clicking on register button
 
-		Thread.sleep(3000);
+		// Thread.sleep(3000);
 
-		registerButtonEle.click();
+		// registerButtonEle.click();
 
 		driver.quit();
 
