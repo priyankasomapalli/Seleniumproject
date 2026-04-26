@@ -19,14 +19,14 @@ public class UserInterfaceActionsUtils {
 	}
 
 	public static void enterPassword(By locator, String password) {
-		WebElement ele=WaitUtils.visibilityOfElement(locator);
-		JSUtils.scrollToAnElement(ele);
-		WaitUtils.visibilityOfElement(locator).sendKeys(password);
+		WebElement ele=WaitUtils.presenceOfElement(locator);
+		JSUtils.jsEnterPassword(ele);
+		WaitUtils.presenceOfElement(locator).sendKeys(password);
 		ExtentTestManager.log.info("Entered text is **********");
 	}
 
 	public static String getText(By locator, String name) {
-		String text = WaitUtils.visibilityOfElement(locator).getText();
+		String text = WaitUtils.presenceOfElement(locator).getText();
 		ExtentTestManager.log.info("Text of the " + name + "  is  " + text);
 		return text;
 	}
@@ -42,7 +42,7 @@ public class UserInterfaceActionsUtils {
 	}
 
 	public static void selectDropDownByIndex(By locator, int index) {
-		WebElement ele = WaitUtils.visibilityOfElement(locator);
+		WebElement ele = WaitUtils.presenceOfElement(locator);
 		Select dd = new Select(ele);
 		dd.selectByIndex(index);
 		ExtentTestManager.log.info("DropDown option is selected by index value. Index is:   " + index);
