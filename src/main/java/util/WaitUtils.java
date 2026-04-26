@@ -30,18 +30,16 @@ public class WaitUtils {
 		// wait.until(ExpectedConditions.elementToBeClickable(locator));
 		// ele.click();
 	}
+
 	public static WebElement visibilityOfElements(By locator) {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		
+
 	}
-	
-	
-	
 
 	public static WebElement presenceOfElement(By locator) {
-		 WebElement ele=JSUtils.jsEnterPassword(wait.until(ExpectedConditions.presenceOfElementLocated(locator)));
-		 
-		 return ele;
+		WebElement ele = JSUtils.jsEnterPassword(wait.until(ExpectedConditions.presenceOfElementLocated(locator)));
+
+		return ele;
 		// wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 
