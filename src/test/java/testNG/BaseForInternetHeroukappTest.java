@@ -35,14 +35,19 @@ public class BaseForInternetHeroukappTest {
 		case "chrome":
 
 			driver = new ChromeDriver();
+			break;
 
 		case "firefox":
 
 			driver = new FirefoxDriver();
+			
+			break;
 
 		case "edge":
 
 			driver = new EdgeDriver();
+			
+			break;
 
 		default:
 
@@ -50,7 +55,7 @@ public class BaseForInternetHeroukappTest {
 
 		}
 
-		// driver.navigate().to("https://the-internet.herokuapp.com/");
+		driver.navigate().to("https://the-internet.herokuapp.com/");
 
 		wait = new WebDriverWait(driver, Duration.ofSeconds(8));
 
