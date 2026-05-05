@@ -1,0 +1,1050 @@
+{
+  "info": {
+    "_postman_id": "0f27693f-f435-4753-9ed1-2d8e6aa4b610",
+    "name": "Report Ease",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54472224",
+    "_collection_link": "https://go.postman.co/collection/54472224-0f27693f-f435-4753-9ed1-2d8e6aa4b610?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1--Register resident",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "1--Register resident",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Priyanka\",\r\n    \"email\": \"sompallipriyanka0547@gmail.com\",\r\n    \"password\": \"SecurePass@123\",\r\n    \"role\": \"resident\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://report-ease-prj-666-naa.vercel.app/api/register",
+              "protocol": "https",
+              "host": [
+                "report-ease-prj-666-naa",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "register"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 201
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 05 May 2026 02:56:05 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "\"3gzqrz0gq626\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-matched-path",
+              "value": "/api/register"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "iad1::iad1::jwsxq-1777949763493-f3cf8a12722f"
+            },
+            {
+              "key": "content-length",
+              "value": "78"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"User registered successfully\",\n    \"userId\": \"69f95c45ca549dec79f0e514\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "1--Register clerk",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "1--Register clerk",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Priyanka\",\r\n    \"email\": \"priyanka.somapalli@gmail.com\",\r\n    \"password\": \"SecurePass@123\",\r\n    \"role\": \"clerk\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://report-ease-prj-666-naa.vercel.app/api/register",
+              "protocol": "https",
+              "host": [
+                "report-ease-prj-666-naa",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "register"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 201
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 05 May 2026 02:58:47 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "\"t1cc5rq3o926\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-matched-path",
+              "value": "/api/register"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "iad1::iad1::d96hk-1777949925173-f96892eb8738"
+            },
+            {
+              "key": "content-length",
+              "value": "78"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"User registered successfully\",\n    \"userId\": \"69f95ce7aaba8a745b5a795b\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "2--Login resident",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "2--Login resident",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"sompallipriyanka0547@gmail.com\",\r\n    \"password\": \"SecurePass@123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://report-ease-prj-666-naa.vercel.app/api/login",
+              "protocol": "https",
+              "host": [
+                "report-ease-prj-666-naa",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 05 May 2026 03:01:17 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "\"g5d4u8mb3dbc\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-matched-path",
+              "value": "/api/login"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "iad1::iad1::7g69j-1777950077749-237d60d32691"
+            },
+            {
+              "key": "content-length",
+              "value": "408"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Zjk1YzQ1Y2E1NDlkZWM3OWYwZTUxNCIsImVtYWlsIjoic29tcGFsbGlwcml5YW5rYTA1NDdAZ21haWwuY29tIiwicm9sZSI6InJlc2lkZW50IiwiaWF0IjoxNzc3OTUwMDc3LCJleHAiOjE3Nzc5NTA5Nzd9.mqmqPDEsGxDyuqlU2o0aIExdPuF-1Cfagw_Iwr1ThJk\",\n    \"user\": {\n        \"id\": \"69f95c45ca549dec79f0e514\",\n        \"name\": \"Priyanka\",\n        \"email\": \"sompallipriyanka0547@gmail.com\",\n        \"role\": \"resident\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "2--Login clerk",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "2--Login clerk",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"priyanka.somapalli@gmail.com\",\r\n    \"password\": \"SecurePass@123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://report-ease-prj-666-naa.vercel.app/api/login",
+              "protocol": "https",
+              "host": [
+                "report-ease-prj-666-naa",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 05 May 2026 03:02:55 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "\"yn18r74trgb1\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-matched-path",
+              "value": "/api/login"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "iad1::iad1::28c8v-1777950175767-401405c90ac7"
+            },
+            {
+              "key": "content-length",
+              "value": "397"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Zjk1Y2U3YWFiYThhNzQ1YjVhNzk1YiIsImVtYWlsIjoicHJpeWFua2Euc29tYXBhbGxpQGdtYWlsLmNvbSIsInJvbGUiOiJjbGVyayIsImlhdCI6MTc3Nzk1MDE3NiwiZXhwIjoxNzc3OTUxMDc2fQ.UPqGoh-2Vwpj4fAOd__-XqCxStoXXr4ZSnbj9_AeXjU\",\n    \"user\": {\n        \"id\": \"69f95ce7aaba8a745b5a795b\",\n        \"name\": \"Priyanka\",\n        \"email\": \"priyanka.somapalli@gmail.com\",\n        \"role\": \"clerk\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "3--forgot password",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "3--forgot password",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"sompallipriyanka0547@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://report-ease-prj-666-naa.vercel.app/api/forgot-password",
+              "protocol": "https",
+              "host": [
+                "report-ease-prj-666-naa",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "forgot-password"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 05 May 2026 03:04:51 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "\"tg89srrq52v\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-matched-path",
+              "value": "/api/forgot-password"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "iad1::iad1::4kx6v-1777950290393-a3e29ad7f0be"
+            },
+            {
+              "key": "content-length",
+              "value": "31"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Reset email sent!\"\n}"
+        },
+        {
+          "name": "3--forgot password",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"sompallipriyanka0547@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://report-ease-prj-666-naa.vercel.app/api/forgot-password",
+              "protocol": "https",
+              "host": [
+                "report-ease-prj-666-naa",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "forgot-password"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 05 May 2026 03:08:20 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "\"tg89srrq52v\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-matched-path",
+              "value": "/api/forgot-password"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "iad1::iad1::s7cg4-1777950498214-23ec53ae605d"
+            },
+            {
+              "key": "content-length",
+              "value": "31"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Reset email sent!\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "4--Reset password resident",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "4--Reset password resident",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"1f419108f6ade140ba39959f2dd4ba6b61ccaece774ee922770e2c46bf716548\",\r\n    \"password\": \"NewSecurePass@456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://report-ease-prj-666-naa.vercel.app/api/reset-password",
+              "protocol": "https",
+              "host": [
+                "report-ease-prj-666-naa",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "reset-password"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 05 May 2026 03:09:16 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "\"8lc6wjeoog12\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-matched-path",
+              "value": "/api/reset-password"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "iad1::iad1::5wt96-1777950555574-0587506f2bb9"
+            },
+            {
+              "key": "content-length",
+              "value": "38"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Password has been reset.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "5--report issue",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "5--report issue",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Zjk1YzQ1Y2E1NDlkZWM3OWYwZTUxNCIsImVtYWlsIjoic29tcGFsbGlwcml5YW5rYTA1NDdAZ21haWwuY29tIiwicm9sZSI6InJlc2lkZW50IiwiaWF0IjoxNzc3OTUwMDc3LCJleHAiOjE3Nzc5NTA5Nzd9.mqmqPDEsGxDyuqlU2o0aIExdPuF-1Cfagw_Iwr1ThJk",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Broken Street Light\",\r\n    \"category\": \"Street Lighting\",\r\n    \"description\": \"Street light is broken\",\r\n    \"location\": \"123 Main Street\",\r\n    \"latitude\": 43.6629,\r\n    \"longitude\": -79.3957,\r\n    \"images\": []\r\n}\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://report-ease-prj-666-naa.vercel.app/api/report",
+              "protocol": "https",
+              "host": [
+                "report-ease-prj-666-naa",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "report"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 201
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 05 May 2026 03:11:27 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "\"pqvytm563rgw\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-matched-path",
+              "value": "/api/report"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "iad1::iad1::klsx4-1777950686334-c6fc59f06401"
+            },
+            {
+              "key": "content-length",
+              "value": "608"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Issue reported successfully\",\n    \"issue\": {\n        \"title\": \"Broken Street Light\",\n        \"category\": \"Street Lighting\",\n        \"description\": \"Street light is broken\",\n        \"location\": \"123 Main Street\",\n        \"latitude\": 43.6629,\n        \"longitude\": -79.3957,\n        \"images\": [],\n        \"status\": \"Pending Approval\",\n        \"priority\": \"Medium\",\n        \"userId\": \"69f95c45ca549dec79f0e514\",\n        \"updates\": [\n            {\n                \"text\": \"Issue submitted and pending approval\",\n                \"status\": \"Pending Approval\",\n                \"timestamp\": \"2026-05-05T03:11:26.372Z\",\n                \"_id\": \"69f95fdeaaba8a745b5a7968\"\n            }\n        ],\n        \"_id\": \"69f95fdeaaba8a745b5a7967\",\n        \"feedbacks\": [],\n        \"createdAt\": \"2026-05-05T03:11:26.377Z\",\n        \"updatedAt\": \"2026-05-05T03:11:26.377Z\",\n        \"__v\": 0\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "6--user issues",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "6--user issues",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Zjk1YzQ1Y2E1NDlkZWM3OWYwZTUxNCIsImVtYWlsIjoic29tcGFsbGlwcml5YW5rYTA1NDdAZ21haWwuY29tIiwicm9sZSI6InJlc2lkZW50IiwiaWF0IjoxNzc3OTUwMDc3LCJleHAiOjE3Nzc5NTA5Nzd9.mqmqPDEsGxDyuqlU2o0aIExdPuF-1Cfagw_Iwr1ThJk",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://report-ease-prj-666-naa.vercel.app/api/issues/user",
+              "protocol": "https",
+              "host": [
+                "report-ease-prj-666-naa",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "issues",
+                "user"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 05 May 2026 03:15:43 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "\"f0mfggzgizfv\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-matched-path",
+              "value": "/api/issues/user"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "BYPASS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "iad1::iad1::lkxsn-1777950943433-88c76f6bce1f"
+            },
+            {
+              "key": "content-length",
+              "value": "571"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"issues\": [\n        {\n            \"_id\": \"69f95fdeaaba8a745b5a7967\",\n            \"title\": \"Broken Street Light\",\n            \"category\": \"Street Lighting\",\n            \"description\": \"Street light is broken\",\n            \"location\": \"123 Main Street\",\n            \"latitude\": 43.6629,\n            \"longitude\": -79.3957,\n            \"images\": [],\n            \"status\": \"Pending Approval\",\n            \"priority\": \"Medium\",\n            \"userId\": \"69f95c45ca549dec79f0e514\",\n            \"updates\": [\n                {\n                    \"text\": \"Issue submitted and pending approval\",\n                    \"status\": \"Pending Approval\",\n                    \"timestamp\": \"2026-05-05T03:11:26.372Z\",\n                    \"_id\": \"69f95fdeaaba8a745b5a7968\"\n                }\n            ],\n            \"feedbacks\": [],\n            \"createdAt\": \"2026-05-05T03:11:26.377Z\",\n            \"updatedAt\": \"2026-05-05T03:11:26.377Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "7--get issue details",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "7--get issue details",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Zjk1YzQ1Y2E1NDlkZWM3OWYwZTUxNCIsImVtYWlsIjoic29tcGFsbGlwcml5YW5rYTA1NDdAZ21haWwuY29tIiwicm9sZSI6InJlc2lkZW50IiwiaWF0IjoxNzc3OTUwMDc3LCJleHAiOjE3Nzc5NTA5Nzd9.mqmqPDEsGxDyuqlU2o0aIExdPuF-1Cfagw_Iwr1ThJk",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://report-ease-prj-666-naa.vercel.app/api/issues/69f95fdeaaba8a745b5a7967",
+              "protocol": "https",
+              "host": [
+                "report-ease-prj-666-naa",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "issues",
+                "69f95fdeaaba8a745b5a7967"
+              ]
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 500
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 05 May 2026 03:19:02 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "\"83a50j1a5qz\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-matched-path",
+              "value": "/api/issues/[id]"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "BYPASS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "iad1::iad1::vx7ch-1777951142015-7551bab59bc8"
+            },
+            {
+              "key": "content-length",
+              "value": "35"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Internal Server Error\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "8--clerk issue status",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "8--clerk issue status",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Zjk1Y2U3YWFiYThhNzQ1YjVhNzk1YiIsImVtYWlsIjoicHJpeWFua2Euc29tYXBhbGxpQGdtYWlsLmNvbSIsInJvbGUiOiJjbGVyayIsImlhdCI6MTc3Nzk1MDE3NiwiZXhwIjoxNzc3OTUxMDc2fQ.UPqGoh-2Vwpj4fAOd__-XqCxStoXXr4ZSnbj9_AeXjU",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"Under Review\",\r\n    \"updateText\": \"Investigation started\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://report-ease-prj-666-naa.vercel.app/api/issues/69f95fdeaaba8a745b5a7967",
+              "protocol": "https",
+              "host": [
+                "report-ease-prj-666-naa",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "issues",
+                "69f95fdeaaba8a745b5a7967"
+              ]
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 500
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 05 May 2026 03:24:44 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "\"83a50j1a5qz\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-matched-path",
+              "value": "/api/issues/[id]"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "iad1::iad1::4xcc8-1777951484353-d87ee2746bfb"
+            },
+            {
+              "key": "content-length",
+              "value": "35"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Internal Server Error\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
